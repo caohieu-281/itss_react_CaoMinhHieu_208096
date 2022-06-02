@@ -2,4 +2,9 @@
 
 .container {
   margin-top: 2rem;
+  
+}
+.panel-heading {
+  color: white;
+  background-color: #ea5d5d
 }
