@@ -37,14 +37,20 @@ const handleCheck = checked => {
     putItems(newItems);
   };
   
+const handleAdd = text => {
+    putItems([...items, { key: getKey(), text, done: false }]);
+  };
+  
   return (
     <div className="panel">
       <div className="panel-heading">
         ITSS ToDoアプリ
       </div>
+      
       {items.map(item => (
         <TodoItem key={item.key} item={item} onCheck={handleCheck}/>
       ))}
+      <Input onAdd={handleAdd} />
       <div className="panel-block">
         {items.length} items
       </div>
